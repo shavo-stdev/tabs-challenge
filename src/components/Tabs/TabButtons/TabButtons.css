@@ -1,0 +1,39 @@
+.tab-buttons {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.tab-buttons button {
+  width: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  margin-right: 15px;
+  font-size: 1.2em;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.tab-buttons .active {
+  border-bottom-color:#61dafb;
+  color: #fff;
+}
+
+.tab-buttons button:focus{
+    border: 2px solid #61dafb;
+}
