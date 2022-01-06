@@ -10,3 +10,7 @@ React supports all popular browsers and For this Project i have added Css Prefix
 
 Reusability
 I have created reusable componets for tabs and loader and each components might contains of small components which can be easier to use and modify 
+
+
+type return useefect
+should use React.FC or not ?

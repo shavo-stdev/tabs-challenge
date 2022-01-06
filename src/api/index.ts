@@ -1,7 +1,7 @@
 import axios from "axios";
 import { baseUrl, apiKey } from "../constans";
 
-export const getUkNews = async () => {
+export const getUkNews = async () : Promise<void | Array<object> | []> => {
   try {
     const { data } = await axios.get(`${baseUrl}/uk-news?api-key=${apiKey}`);
     if (data?.response?.status === "ok") {
@@ -11,7 +11,8 @@ export const getUkNews = async () => {
     console.log(e);
   }
 };
-export const getTravel = async () => {
+
+export const getTravel = async () : Promise<void | Array<object> | []> => {
   try {
     const { data } = await axios.get(`${baseUrl}/travel?api-key=${apiKey}`);
     if (data?.response?.status === "ok") {
@@ -21,7 +22,8 @@ export const getTravel = async () => {
     console.log(e);
   }
 };
-export const getFootball = async () => {
+
+export const getFootball = async () : Promise<void | Array<object> | []> => {
   try {
     const { data } = await axios.get(`${baseUrl}/football?api-key=${apiKey}`);
     if (data?.response?.status === "ok") {

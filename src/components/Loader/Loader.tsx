@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import "./Loader.css";
 
-const Loader = () => {
+const Loader : FC = () : JSX.Element => {
   return (
     <div className="loader-wrapper">
       <div className="loader">

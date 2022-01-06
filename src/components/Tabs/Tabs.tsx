@@ -1,10 +1,14 @@
-import { memo } from "react";
-import "./Tabs.css";
+import { memo , FC} from "react";
 import TabButtons from "./TabButtons/TabButtons";
 import TabContent from "./TabContent/TabContent";
+import {Props} from './interfaces'
+import "./Tabs.css";
 
-const Tabs = ({ activeTab, setCurrentTab, data }) => {
-  const changeTab = (tab) => {
+
+
+const Tabs : FC<Props> = ({ activeTab, setCurrentTab, data }) : JSX.Element => {
+
+  const changeTab = (tab : number) : void => {
     setCurrentTab(tab);
   };
 
@@ -17,8 +21,9 @@ const Tabs = ({ activeTab, setCurrentTab, data }) => {
   );
 };
 
-function areEqual(prevProps, nextProps) {
+
+function areEqual(prevProps : Props, nextProps : Props ): boolean{
   return prevProps?.data === nextProps?.data;
 }
 
-export default memo(Tabs, areEqual);
+export default memo<Props>(Tabs, areEqual);
